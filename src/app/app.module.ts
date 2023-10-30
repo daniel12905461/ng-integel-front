@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from "./core/layout/layout.module";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { LayoutModule } from "./core/layout/layout.module";
         AppRoutingModule,
         BrowserAnimationsModule,
         MatIconModule,
-        LayoutModule
+        LayoutModule,
+        HttpClientModule
     ]
 })
 export class AppModule { }
