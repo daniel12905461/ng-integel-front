@@ -23,6 +23,7 @@ export class AuthService {
 
   login(loginForm: any) {
     return this.http.post<any>(this.baseUrl+`/login`, loginForm, httpOptions);
+    // return this.http.post<any>(this.baseUrl+`/login`, loginForm, httpOptions);
   }
 
   logout() {

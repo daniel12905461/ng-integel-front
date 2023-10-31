@@ -4,10 +4,15 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '../core/layout/layout.module';
+import { ListUsuariosComponent } from './list-usuarios/list-usuarios.component';
+import { CreateUsuariosComponent } from './list-usuarios/create-usuarios/create-usuarios.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ListUsuariosComponent,
+    CreateUsuariosComponent
+  ],
   imports: [
     CommonModule,
     DashboardRoutingModule,

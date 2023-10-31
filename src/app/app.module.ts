@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from "./core/layout/layout.module";
 import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
         BrowserAnimationsModule,
         MatIconModule,
         LayoutModule,
-        HttpClientModule
+        HttpClientModule,
+        CoreModule
     ]
 })
 export class AppModule { }

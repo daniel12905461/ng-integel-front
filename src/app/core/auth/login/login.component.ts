@@ -54,10 +54,12 @@ export class LoginComponent implements OnInit {
 
           this.alertSwal.showSwallSuccess(data);
 
-          this.router.navigate(['/dashboard/e-commerce']);
+          this.router.navigate(['/dashboard']);
         },
         (error: any) => {
           this.alertSwal.showSwallError(error.error);
+          // console.log(error);
+          
         }
       );
   }
