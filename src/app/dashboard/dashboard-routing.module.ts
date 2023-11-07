@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { ListUsuariosComponent } from './list-usuarios/list-usuarios.component';
 import { AuthGuardService } from '../core/service/auth-guard.service';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,11 @@ const routes: Routes = [
       {
         path:'usuarios',
         component: ListUsuariosComponent,
+        // canActivate: [AuthGuardService]
+      },
+      {
+        path:'inicio',
+        component: MainComponent,
         // canActivate: [AuthGuardService]
       },
     ]

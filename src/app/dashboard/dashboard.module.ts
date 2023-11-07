@@ -7,12 +7,14 @@ import { LayoutModule } from '../core/layout/layout.module';
 import { ListUsuariosComponent } from './list-usuarios/list-usuarios.component';
 import { CreateUsuariosComponent } from './list-usuarios/create-usuarios/create-usuarios.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
   declarations: [
     ListUsuariosComponent,
-    CreateUsuariosComponent
+    CreateUsuariosComponent,
+    MainComponent
   ],
   imports: [
     CommonModule,
