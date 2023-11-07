@@ -11,13 +11,17 @@ const routes: Routes = [
     loadChildren: () => import('./core/auth/auth.module').then(m => m.AuthModule)
   },
   {
+    path: 'website',
+    loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule)
+  },
+  {
     path: '**',
     redirectTo: 'auth'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,  { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

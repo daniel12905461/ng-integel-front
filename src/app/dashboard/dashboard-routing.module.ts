@@ -12,7 +12,7 @@ const routes: Routes = [
       {
         path:'usuarios',
         component: ListUsuariosComponent,
-        canActivate: [AuthGuardService]
+        // canActivate: [AuthGuardService]
       },
     ]
   }

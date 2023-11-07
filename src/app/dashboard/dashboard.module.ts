@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '../core/layout/layout.module';
 import { ListUsuariosComponent } from './list-usuarios/list-usuarios.component';
 import { CreateUsuariosComponent } from './list-usuarios/create-usuarios/create-usuarios.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,6 +17,8 @@ import { CreateUsuariosComponent } from './list-usuarios/create-usuarios/create-
   imports: [
     CommonModule,
     DashboardRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatIconModule
   ]
 })

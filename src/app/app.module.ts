@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from "./core/layout/layout.module";
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { CoreModule } from './core/core.module';
         MatIconModule,
         LayoutModule,
         HttpClientModule,
-        CoreModule
+        CoreModule,
+        NgbModule
     ]
 })
 export class AppModule { }

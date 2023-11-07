@@ -4,58 +4,30 @@
     <div class="prueba h-screen md:flex flex-col lg:w-64 bg-white shadow-lg"
         [ngClass]="menuShow ? 'w-64 flex' : 'hidden w-16'">
         <div class="pt-10 pb-8 text-center">
-          <!-- <img src="assets/5.png" alt="" height="10"> -->
+          <img src="assets/logo-original.gif" alt="">
           <!-- <span class="font-bold text-lg text-emerald-500"
               [ngClass]="menuShow || menuShow ? '' : 'hidden lg:contents'">FacialCheck</span> -->
         </div>
         <div class="flex-grow px-2 overflow-y-auto scrollbarStyle">
             <!-- [ngClass]="menuShow || menuShow ? 'px-6' : ' px-0 lg:px-6'" -->
-            <div class="bg-emerald-50 rounded-lg py-4 flex flex-col">
-                <a href="/dashboard/funcionarios"
-                    class="text-slate-400 font-bold py-1 block text-lg hover:text-sky-500 hover:bg-sky-300 hover:rounded-md active:text-sky-500 active:py-2"
-                    [ngClass]="menuShow || menuShow ? 'text-left' : 'lg:text-left'">
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+            <div class="rounded-lg py-4 flex flex-col">
+                <a [routerLink]="['/dashboard/usuarios']"
+                    class="text-[#023047] font-bold py-1 text-lg hover:text-[#023047] hover:bg-[#fb8500] rounded-md flex flex-row my-1"
+                    [ngClass]="menuShow || menuShow ? 'text-left' : 'lg:text-left'"
+                    routerLinkActive="active"
+                >
+                    <div class="w-12 flex justify-center items-center">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+                    </div>
                     <span [ngClass]="menuShow || menuShow ? '' : 'hidden lg:contents lg:ml-4'">Usuarios</span>
                 </a>
-                <a href="/dashboard/roles"
-                    class="text-slate-400 font-bold py-1 block text-lg hover:text-sky-500 hover:py-3 hover:lg:ml-1 active:text-sky-500 active:py-2"
+                <a [routerLink]="['/dashboard']"
+                    class="text-[#023047] font-bold py-1 text-lg hover:text-[#023047] hover:bg-[#fb8500] hover:rounded-md flex flex-row"
                     [ngClass]="menuShow || menuShow ? 'text-left' : 'lg:text-left'">
-                    <svg class="inline pb-1 lg:mr-1" style="width: auto; height: 1.8rem;" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    <span [ngClass]="menuShow || menuShow ? '' : 'hidden lg:contents'">Roles</span>
-                </a>
-                <a href="/dashboard/horarios"
-                    class="text-slate-400 font-bold py-1 block text-lg hover:text-sky-500 hover:py-3 hover:lg:ml-1 active:text-sky-500 active:py-2"
-                    [ngClass]="menuShow || menuShow ? 'text-left' : 'lg:text-left'">
-                    <svg class="inline pb-1 lg:mr-1" style="width: auto; height: 1.8rem;" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    <span [ngClass]="menuShow || menuShow ? '' : 'hidden lg:contents'">Horarios</span>
-                </a>
-                <a href="/dashboard/ubicaciones"
-                    class="text-slate-400 font-bold py-1 block text-lg hover:text-sky-500 hover:py-3 hover:lg:ml-1 active:text-sky-500 active:py-2 active"
-                    [ngClass]="menuShow || menuShow ? 'text-left' : 'lg:text-left'">
-                    <svg class="inline pb-1 lg:mr-1" style="width: auto; height: 1.8rem;" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    <span [ngClass]="menuShow || menuShow ? '' : 'hidden lg:contents'">Ubicaciones</span>
-                </a>
-                <a href="/dashboard/reportes"
-                    class="text-slate-400 font-bold py-1 block text-lg hover:text-sky-500 hover:py-3 hover:lg:ml-1 active:text-sky-500 active:py-2 active"
-                    [ngClass]="menuShow || menuShow ? 'text-left' : 'lg:text-left'">
-                    <svg class="inline pb-1 lg:mr-1" style="width: auto; height: 1.8rem;" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    <span [ngClass]="menuShow || menuShow ? '' : 'hidden lg:contents'">Reportes</span>
+                    <div class="w-12 flex justify-center items-center">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+                    </div>
+                    <span [ngClass]="menuShow || menuShow ? '' : 'hidden lg:contents lg:ml-4'">Planes</span>
                 </a>
             </div>
         </div>

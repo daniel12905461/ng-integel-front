@@ -4,6 +4,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatIconModule } from '@angular/material/icon';
+import { AppComponent } from 'src/app/app.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,12 +17,14 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ],
   exports: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent
-  ]
+  ],
+  bootstrap: [AppComponent]
 })
 export class LayoutModule { }
