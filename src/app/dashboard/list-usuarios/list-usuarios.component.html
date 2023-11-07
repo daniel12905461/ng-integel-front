@@ -17,11 +17,20 @@
     </thead>
     <tbody>
         <!-- Filas de ejemplo con Tailwind CSS -->
-        <tr *ngFor="let base of usuarios; let i = index">
+        <!-- <tr *ngFor="let base of usuarios; let i = index">
             <td class="border px-4 py-2">{{ i + 1 }}</td>
             <td class="border px-4 py-2">{{ base.nombres }} {{ base.apellidos }}</td>
             <td class="border px-4 py-2">{{ base.user }}</td>
             <td class="border px-4 py-2">
+                <button class="bg-[#fb8500] text-white rounded px-2 py-1 mr-2 font-medium" (click)="edit(base.id)">Editar</button>
+                <button class="bg-[#023047] text-white rounded px-2 py-1 font-medium" (click)="eliminar(base.id)">Eliminar</button>
+            </td>
+        </tr> -->
+        <tr class="border-t" *ngFor="let base of usuarios; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ base.nombres }} {{ base.apellidos }}</td>
+            <td>{{ base.user }}</td>
+            <td>
                 <!-- Botón para editar usuario -->
                 <button class="bg-[#fb8500] text-white rounded px-2 py-1 mr-2 font-medium" (click)="edit(base.id)">Editar</button>
                 
