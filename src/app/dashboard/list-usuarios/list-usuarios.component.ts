@@ -10,8 +10,11 @@ import { CreateUsuariosComponent } from './create-usuarios/create-usuarios.compo
   styleUrls: ['./list-usuarios.component.css']
 })
 export class ListUsuariosComponent {
-  usuarios!: any[];
+  objs!: any;
+  objsPaginado!: any;
   modalOptions: NgbModalOptions = {};
+  currentPage: number = 1; // Página actual
+  lastPage: number = 1; // Última página
 
   constructor(
     private modalService: NgbModal,
@@ -25,7 +28,33 @@ export class ListUsuariosComponent {
 
   list() {
     this.baseService.getAll().subscribe(res => {
-      this.usuarios = res.data;
+      this.objs = res.data.data;
+      this.objsPaginado = res.data;
+      this.currentPage = res.data.current_page;
+      this.lastPage = res.data.last_page;
+    });
+  }
+  
+  nextPage() {
+    if (this.currentPage < this.lastPage) {
+      this.currentPage++;
+      this.loadPage(this.currentPage);
+    }
+  }
+
+  prevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.loadPage(this.currentPage);
+    }
+  }
+
+  loadPage(page: number) {
+    this.baseService.getAll(page).subscribe(res => {
+      this.objs = res.data.data;
+      this.objsPaginado = res.data;
+      this.currentPage = res.data.current_page;
+      this.lastPage = res.data.last_page;
     });
   }
 
